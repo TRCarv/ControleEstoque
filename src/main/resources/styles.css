@@ -1,0 +1,123 @@
+
+
+/* --- Configurações Gerais --- */
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica", sans-serif; /* Fontes modernas */
+    -fx-font-size: 20px;
+    -fx-background-color: #f4f6f8; /* Fundo cinza bem claro, mais agradável que branco puro */
+}
+
+/* --- Labels (Rótulos) --- */
+.label {
+    -fx-text-fill: #2c3e50; /* Cinza escuro/Azul escuro */
+    -fx-font-weight: bold;
+}
+
+/* --- Campos de Texto e ComboBox --- */
+.text-field, .combo-box {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-border-color: #dce1e5;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-padding: 8px; /* Mais espaço interno para conforto visual */
+}
+
+.text-field:focused, .combo-box:focused {
+    -fx-border-color: #3498db; /* Azul ao focar */
+    -fx-effect: dropshadow(three-pass-box, rgba(52, 152, 219, 0.3), 5, 0, 0, 0);
+}
+
+/* --- Botões (Base) --- */
+.button {
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 20px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 3, 0, 0, 1);
+}
+
+/* Botão Padrão (Azul - ex: Atualizar) */
+.button {
+    -fx-background-color: #3498db;
+}
+.button:hover {
+    -fx-background-color: #2980b9; /* Um pouco mais escuro no hover */
+}
+.button:pressed {
+    -fx-background-color: #1f618d;
+}
+
+/* --- Classes Específicas para Botões --- */
+
+/* Botão de Sucesso (Verde - ex: Adicionar) */
+.button-success {
+    -fx-background-color: #27ae60;
+}
+.button-success:hover {
+    -fx-background-color: #219150;
+}
+
+/* Botão de Perigo (Vermelho - ex: Excluir) */
+.button-danger {
+    -fx-background-color: #e74c3c;
+}
+.button-danger:hover {
+    -fx-background-color: #c0392b;
+}
+
+/* Botão Neutro (Cinza - ex: Limpar) */
+.button-neutral {
+    -fx-background-color: #95a5a6;
+}
+.button-neutral:hover {
+    -fx-background-color: #7f8c8d;
+}
+
+/* --- TableView (Tabela) --- */
+.table-view {
+    -fx-background-color: transparent; /* Remove bordas duplas */
+    -fx-base: white; /* Cor base para as células */
+    -fx-control-inner-background: white;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 0); /* Sombra leve na tabela */
+}
+
+/* Cabeçalho da Tabela */
+.table-view .column-header-background {
+    -fx-background-color: #ecf0f1;
+    -fx-border-width: 0 0 1 0; /* Apenas borda inferior */
+    -fx-border-color: #bdc3c7;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-size: 40px; /* Altura do cabeçalho */
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #7f8c8d;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Linhas da Tabela */
+.table-row-cell {
+    -fx-cell-size: 35px; /* Altura das linhas */
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #f0f2f5;
+}
+
+/* Linha Selecionada */
+.table-view:focused .table-row-cell:selected {
+    -fx-background-color: #e8f6fd; /* Azul bem clarinho para seleção */
+    -fx-table-cell-border-color: transparent;
+}
+
+/* Texto na linha selecionada */
+.table-view:focused .table-row-cell:selected .text {
+    -fx-fill: #2980b9; /* Texto azul na seleção */
+    -fx-font-weight: bold;
+}
