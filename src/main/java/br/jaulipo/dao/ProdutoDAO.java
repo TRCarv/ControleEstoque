@@ -101,7 +101,7 @@ public class ProdutoDAO {
             ResultSet rs = stmt.executeQuery()){
                while(rs.next()){
                    Produto produto = new Produto();
-                   produto.setId(rs.getInt("produto_id"));
+                   produto.setId(rs.getInt("id_produto"));
                    produto.setNome( rs.getString("nome_produto")) ;
                    produto.setQuantidade(rs.getInt("quantidade")) ;
                    produto.setPreco(rs.getDouble("preco")) ;
